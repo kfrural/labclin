@@ -41,3 +41,19 @@ a.button {
 a.button:hover {
     background-color: #901212;
 }
+
+@media screen and (max-width: 768px) {
+    div {
+        width: 90%;
+    }
+
+    img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    input, a.button {
+        width: 100%;
+    }
+}

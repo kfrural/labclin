@@ -1,3 +1,4 @@
+/* Reset CSS */
 body {
     font-family: Arial, sans-serif;
     background-color: #F0F0F0;
@@ -5,33 +6,57 @@ body {
     padding: 0;
 }
 
+/* Header Styles */
 .header {
     background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-content {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
+/* Tarja Vermelha */
 .tarjaVermelha {
     background-color: #BC1D1D;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
+/* Logo Styles */
 .imgLogo {
+    float: left;
     margin-left: 7%;
     width: 151px;
     height: 60px;
-    float: left;
 }
 
-.clicaveisHeader {
+/* Menu Styles */
+.menu {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.clicaveisHeader a {
+.menu-toggle {
+    display: none;
+    float: right;
+    margin-right: 5%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
     color: #000;
     text-decoration: none;
     margin: 0 15px;
@@ -40,10 +65,11 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.clicaveisHeader a:hover {
+.menu a:hover {
     background-color: #EAEAEA;
 }
 
+/* Button Styles */
 a.btn-Resultados {
     float: right;
     margin-right: 7%;
@@ -61,10 +87,12 @@ a.btn-Resultados:hover {
     background-color: #901212;
 }
 
-.sub{
+/* Sub Styles */
+.sub {
     text-align: center;
 }
 
+/* Typography Styles */
 .h1 {
     color: #BC1D1D;
     font-family: 'Montserrat', sans-serif;
@@ -79,6 +107,7 @@ p {
     font-weight: 400;
 }
 
+/* Logo Convenios Styles */
 .logoConvenios {
     margin: 7%;
     display: grid;
@@ -91,29 +120,15 @@ p {
     text-align: center;
     background-color: #fff;
     border: 1px solid #BC1D1D;
-    border-radius: 60px;
-    padding: 80px;
+    border-radius: 40px;
+    padding: 100px;
 }
 
-
-
-
-
-
-
-
-.btn-whatsapp a {
-
-    color: #fff;
-    text-decoration: none;
-    display: block;
-}
-
+/* WhatsApp Button Styles */
 .btn-whatsapp {
-
     position: fixed;
     right: 75px;
-    bottom: 30px;
+    bottom: 100px;
     transform: translate(-50%, -50%);
     background-color: rgb(37, 211, 102);
     width: 60px;
@@ -124,11 +139,11 @@ p {
     color: #ffffff;
     font-weight: 100;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .btn-whatsapp:before,
 .btn-whatsapp:after {
-
     content: '';
     display: block;
     position: absolute;
@@ -148,20 +163,138 @@ p {
 }
 
 @keyframes animate {
-
-
     0% {
         transform: scale(0.5);
         opacity: 0;
     }
-
     50% {
         opacity: 1;
     }
-
     100% {
         transform: scale(1.2);
         opacity: 0;
     }
+}
 
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    .header-content {
+        padding: 10px;
+    }
+
+    .imgLogo {
+        margin-left: 5%;
+        width: 90px;
+        height: 36px;
+    }
+
+    .menu a {
+        margin: 0 10px;
+        padding: 8px;
+        display: none;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu a {
+        margin: 0 10px;
+        padding: 8px;
+        display: block;
+    }
+
+    .menu a:hover {
+        background-color: #EAEAEA;
+    }
+
+    a.btn-Resultados {
+        margin-right: 5%;
+        padding: 4px;
+        width: 100px;
+    }
+
+    .sub {
+        padding: 10px;
+    }
+
+    .h1 {
+        font-size: 28px;
+        margin-top: 10px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .logoConvenios {
+        margin: 5%;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logoConvenios div {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .btn-whatsapp {
+        right: 50px;
+        bottom: 80px;
+        width: 50px;
+        height: 50px;
+        line-height: 48px;
+        font-size: 1.5em;
+        margin-right: 5px;
+    }
+
+    .btn-whatsapp:before,
+    .btn-whatsapp:after {
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        top: -15px;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    .menu ul.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px 0;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    a.btn-Resultados {
+        color: #fff;
+    }
+
+    .menu a {
+        color: #BC1D1D;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .logoConvenios div img {
+        max-width: 80px; 
+        height: auto;
+    }
+    .sub img {
+        max-width: 200px; 
+        height: auto; 
+    }
 }
