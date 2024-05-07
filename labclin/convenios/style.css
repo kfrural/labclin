@@ -50,6 +50,9 @@ body {
 .menu ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .menu li {
@@ -162,14 +165,71 @@ p {
     animation-delay: .5s;
 }
 
+footer {
+    height: 135px;
+    width: 100%;
+    background-color: rgba(180, 29, 29, 0.9);
+    background-image: url('../assets/fundoBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.txt-footer {
+    font-family: Inter;
+    font-size: 15px;
+    line-height: 1.07;
+    letter-spacing: -0.16px;
+    color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+}
+
+.address {
+    font-size: small;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.column {
+    padding: 0 80px;
+    order: 2;
+    margin-top: 10px;
+}
+
+.large-text {
+    font-size: 20px;
+}
+
+.address-column {
+    order: 0;
+}
+
+.IconFooter {
+    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+    filter: invert(100%);
+}
+
+.logoFooter {
+    margin-left: 30px;
+    margin-right: 10px;
+    width: auto;
+    height: 70px;
+    filter: brightness(100);
+}
+
 @keyframes animate {
     0% {
         transform: scale(0.5);
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         transform: scale(1.2);
         opacity: 0;
@@ -178,66 +238,53 @@ p {
 
 /* Media Query for Responsive Design */
 @media screen and (max-width: 768px) {
-    .header-content {
-        padding: 10px;
-    }
-
     .imgLogo {
         margin-left: 5%;
         width: 90px;
         height: 36px;
     }
-
-    .menu a {
-        margin: 0 10px;
-        padding: 8px;
-        display: none;
+    .menu {
+        justify-content: flex-end;
+        margin-right: 5px;
     }
-
     .menu.show {
         display: flex;
     }
-
-    .menu a {
-        margin: 0 10px;
-        padding: 8px;
-        display: block;
-    }
-
+    
     .menu a:hover {
         background-color: #EAEAEA;
     }
-
+    
     a.btn-Resultados {
         margin-right: 5%;
         padding: 4px;
         width: 100px;
     }
-
+    
     .sub {
         padding: 10px;
     }
-
+    
     .h1 {
         font-size: 28px;
         margin-top: 10px;
     }
-
+    
     p {
         font-size: 16px;
     }
-
+    
     .logoConvenios {
         margin: 5%;
         gap: 30px;
         grid-template-columns: repeat(2, 1fr);
     }
-
+    
     .logoConvenios div {
         padding: 20px;
         border-radius: 10px;
     }
-
+    
     .btn-whatsapp {
         right: 50px;
         bottom: 80px;
@@ -247,7 +294,7 @@ p {
         font-size: 1.5em;
         margin-right: 5px;
     }
-
+    
     .btn-whatsapp:before,
     .btn-whatsapp:after {
         left: -15px;
@@ -255,11 +302,11 @@ p {
         bottom: -15px;
         top: -15px;
     }
-
+    
     .menu ul {
         display: none;
     }
-
+    
     .menu ul.show {
         display: flex;
         flex-direction: column;
@@ -272,29 +319,78 @@ p {
         width: 100%;
         z-index: 1;
     }
-
+    
     .menu li {
         margin: 10px 0;
     }
-
+    
     a.btn-Resultados {
-        color: #fff;
+        background-color: #fff;
     }
-
+    
     .menu a {
         color: #BC1D1D;
     }
-
+    
     .menu-toggle {
         display: block;
     }
-
+    
     .logoConvenios div img {
-        max-width: 80px; 
+        max-width: 80px;
         height: auto;
     }
+    
     .sub img {
-        max-width: 200px; 
-        height: auto; 
+        max-width: 200px;
+        height: auto;
     }
+    
+    footer {
+        height: auto;
+        padding: 20px 0;
+        background-size: auto 100%;
+      }
+    
+      .txt-footer {
+        display: flex;
+        justify-content: space-between; 
+      }
+    
+      .address {
+        margin-left: 5px;
+        margin-top: 5px;
+        font-size: 3px;
+      }
+    
+      .column {
+        padding: 0 10px;
+        margin-top: 5px;
+        font-size: 4px;
+      }
+    
+      .large-text {
+        font-size: 6px;
+      }
+    
+      .address-column {
+        order: 1;
+      }
+    
+      .IconFooter {
+        margin-right: 5px;
+        width: 8px;
+        height: 8px;
+      }
+    
+      .logoFooter {
+        margin-left: 5px;
+        margin-right: 5px;
+        height: 20px;
+      }
+
+      center {
+        font-size: 8px;
+      }
+    
 }
