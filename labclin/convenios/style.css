@@ -93,18 +93,20 @@ a.btn-Resultados:hover {
 /* Sub Styles */
 .sub {
     text-align: center;
+    color: #BC1D1D;
 }
 
 /* Typography Styles */
 .h1 {
-    color: #BC1D1D;
+    
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 35px;
     margin-top: 20px;
 }
 
-p {
+.p {
+    color: #000;
     font-size: 20px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -131,7 +133,7 @@ p {
 .btn-whatsapp {
     position: fixed;
     right: 75px;
-    bottom: 100px;
+    bottom: 140px;
     transform: translate(-50%, -50%);
     background-color: rgb(37, 211, 102);
     width: 60px;
@@ -169,7 +171,7 @@ footer {
     height: 135px;
     width: 100%;
     background-color: rgba(180, 29, 29, 0.9);
-    background-image: url('../assets/fundoBg.png');
+    background-image: url('../assets/fundoBg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -193,9 +195,9 @@ footer {
 
 .column {
     padding: 0 80px;
-    order: 2;
     margin-top: 10px;
 }
+
 
 .large-text {
     font-size: 20px;
@@ -203,6 +205,11 @@ footer {
 
 .address-column {
     order: 0;
+}
+.icon-column {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .IconFooter {
@@ -270,7 +277,7 @@ footer {
         margin-top: 10px;
     }
     
-    p {
+    .p {
         font-size: 16px;
     }
     
@@ -286,7 +293,7 @@ footer {
     }
     
     .btn-whatsapp {
-        right: 50px;
+        right: 20px;
         bottom: 80px;
         width: 50px;
         height: 50px;
