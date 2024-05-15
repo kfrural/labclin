@@ -178,13 +178,14 @@ footer {
 }
 
 .txt-footer {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 15px;
     line-height: 1.07;
     letter-spacing: -0.16px;
     color: #f5f5f5;
     display: flex;
     justify-content: space-between;
+    padding: 0 15px;
 }
 
 .address {
@@ -194,22 +195,29 @@ footer {
 }
 
 .column {
-    padding: 0 80px;
+    padding: 0 15px;
     margin-top: 10px;
 }
 
+.column-logo {
+    margin-left: -10px; 
+}
+
+.column-icons {
+    margin-left: 40px; 
+    margin-right: -20px; 
+    
+}
 
 .large-text {
     font-size: 20px;
+    margin-bottom: -9px;
 }
 
-.address-column {
-    order: 0;
-}
 .icon-column {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 7px;
 }
 
 .IconFooter {
@@ -221,7 +229,6 @@ footer {
 
 .logoFooter {
     margin-left: 30px;
-    margin-right: 10px;
     width: auto;
     height: 70px;
     filter: brightness(100);
@@ -240,6 +247,58 @@ footer {
     100% {
         transform: scale(1.2);
         opacity: 0;
+    }
+}
+
+@media (max-width: 1197px) {
+    .address{
+        margin-top: 2px;
+    }
+}
+
+
+@media (max-width: 975px) {
+    footer {
+        height: auto; 
+    }
+
+    .txt-footer {
+        flex-direction: column; 
+        align-items: center;
+        padding: 20px 10px; 
+    }
+
+    .column {
+        text-align: center; 
+        width: 100%; 
+    }
+
+    .column-icons {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        margin-left: 0; 
+        text-align: center; 
+    }
+
+    .address {
+        margin-top: 0; 
+        margin-left: 0; 
+        text-align: center; 
+    }
+
+    .column-logo, .column.left {
+        margin-left: 0; 
+        text-align: center; 
+    }
+
+    .column.right {
+        margin-right: 0; 
+        text-align: center; 
+    }
+
+    .icon-column {
+        margin: 0 5px; 
     }
 }
 
@@ -352,49 +411,6 @@ footer {
         max-width: 200px;
         height: auto;
     }
-    
-    footer {
-        height: auto;
-        padding: 20px 0;
-        background-size: auto 100%;
-      }
-    
-      .txt-footer {
-        display: flex;
-        justify-content: space-between; 
-      }
-    
-      .address {
-        margin-left: 5px;
-        margin-top: 5px;
-        font-size: 3px;
-      }
-    
-      .column {
-        padding: 0 10px;
-        margin-top: 5px;
-        font-size: 4px;
-      }
-    
-      .large-text {
-        font-size: 6px;
-      }
-    
-      .address-column {
-        order: 1;
-      }
-    
-      .IconFooter {
-        margin-right: 5px;
-        width: 8px;
-        height: 8px;
-      }
-    
-      .logoFooter {
-        margin-left: 5px;
-        margin-right: 5px;
-        height: 20px;
-      }
 
       center {
         font-size: 8px;
